@@ -1,5 +1,5 @@
 --[[
-	pointshop/sv_init.lua
+	pointshop3/sv_init.lua
 	first file included serverside.
 ]]--
 
@@ -225,28 +225,28 @@ PS.BuildOutdated = false
 
 local function CompareVersions()
 	if PS.CurrentBuild < PS.LatestBuild then
-		MsgN('PointShop is out of date!')
+		MsgN('PointShop3 is out of date!')
 		MsgN('Local version: ' .. PS.CurrentBuild .. ', Latest version: ' .. PS.LatestBuild)
 
 		PS.BuildOutdated = true
 	else
-		MsgN('PointShop is on the latest version.')
+		MsgN('PointShop3 is on the latest version.')
 	end
 end
 
 function PS:CheckVersion()
-	if file.Exists('data/pointshop_build.txt', 'GAME') then
-		PS.CurrentBuild = tonumber(file.Read('data/pointshop_build.txt', 'GAME')) or 0
+	if file.Exists('data/pointshop3_build.txt', 'GAME') then
+		PS.CurrentBuild = tonumber(file.Read('data/pointshop3_build.txt', 'GAME')) or 0
 	end
 
-	local url = self.Config.Branch .. 'data/pointshop_build.txt'
+	local url = self.Config.Branch .. 'data/pointshop3_build.txt'
 	http.Fetch( url,
 		function( content ) -- onSuccess
 			PS.LatestBuild = tonumber( content ) or 0
 			CompareVersions()
 		end,
 		function(failCode) -- onFailure
-			MsgN('PointShop couldn\'t check version.')
+			MsgN('PointShop3 couldn\'t check version.')
 			MsgN(url, ' returned ', failCode)
 		end
 	)
@@ -255,9 +255,9 @@ end
 -- data providers
 
 function PS:LoadDataProvider()
-	local path = "pointshop/providers/" .. self.Config.DataProvider .. ".lua"
+	local path = "pointshop3/providers/" .. self.Config.DataProvider .. ".lua"
 	if not file.Exists(path, "LUA") then
-		error("Pointshop data provider not found. " .. path)
+		error("Pointshop3 data provider not found. " .. path)
 	end
 
 	PROVIDER = {}

@@ -1,14 +1,14 @@
 function PROVIDER:GetData(ply, callback)
-	if not file.IsDir('pointshop', 'DATA') then
-		file.CreateDir('pointshop')
+	if not file.IsDir('pointshop3', 'DATA') then
+		file.CreateDir('pointshop3')
 	end
 	
 	local points, items
 	
 	local filename = string.Replace(ply:SteamID(), ':', '_')
 	
-	if not file.Exists('pointshop/' .. filename .. '.txt', 'DATA') then
-		file.Write('pointshop/' .. filename .. '.txt', util.TableToJSON({
+	if not file.Exists('pointshop3/' .. filename .. '.txt', 'DATA') then
+		file.Write('pointshop3/' .. filename .. '.txt', util.TableToJSON({
 			Points = 0,
 			Items = {}
 		}))
@@ -16,7 +16,7 @@ function PROVIDER:GetData(ply, callback)
 		points = 0
 		items = {}
 	else
-		local data = util.JSONToTable(file.Read('pointshop/' .. filename .. '.txt', 'DATA'))
+		local data = util.JSONToTable(file.Read('pointshop3/' .. filename .. '.txt', 'DATA'))
 		
 		points = data.Points or 0
 		items = data.Items or {}
@@ -62,13 +62,13 @@ function PROVIDER:TakeItem( ply, item_id )
 end
 
 function PROVIDER:SetData(ply, points, items)
-	if not file.IsDir('pointshop', 'DATA') then
-		file.CreateDir('pointshop')
+	if not file.IsDir('pointshop3', 'DATA') then
+		file.CreateDir('pointshop3')
 	end
 	
 	local filename = string.Replace(ply:SteamID(), ':', '_')
 	
-	file.Write('pointshop/' .. filename .. '.txt', util.TableToJSON({
+	file.Write('pointshop3/' .. filename .. '.txt', util.TableToJSON({
 		Points = points,
 		Items = items
 	}))

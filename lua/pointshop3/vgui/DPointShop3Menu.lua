@@ -249,7 +249,7 @@ function PANEL:Init()
 		
 		for _, ITEM in pairs(items) do
 			if ITEM.Category == CATEGORY.Name then
-				local model = vgui.Create('DPointShopItem')
+				local model = vgui.Create('DPointShop3Item')
 				model:SetData(ITEM)
 				model:SetSize(128, 128)
 				
@@ -363,7 +363,7 @@ function PANEL:Init()
 		preview:DockMargin(self:GetWide() - 320, 0, 0, 0)
 		preview:Dock(FILL)
 		
-		local previewpanel = vgui.Create('DPointShopPreview', preview)
+		local previewpanel = vgui.Create('DPointShop3Preview', preview)
 		previewpanel:Dock(FILL)
 		
 		--- Drag Rotate
@@ -411,7 +411,7 @@ function PANEL:Init()
 		end
 		givebutton:Dock(BOTTOM)
 		givebutton.DoClick = function()
-			vgui.Create('DPointShopGivePoints')
+			vgui.Create('DPointShop3GivePoints')
 		end
 	end
 end
@@ -459,13 +459,13 @@ function PANEL:Paint(w, h)
 	surface.DrawRect(0, 0, w, 48)
 
 	if PS.Config.CommunityName then
-		draw.SimpleText(PS.Config.CommunityName .. " PointShop", 'PS_LargeTitle', 16, 8, color_white)
+		draw.SimpleText(PS.Config.CommunityName .. " PointShop3", 'PS_LargeTitle', 16, 8, color_white)
 	else
-		draw.SimpleText("PointShop", 'PS_LargeTitle', 16, 8, color_white)
+		draw.SimpleText("PointShop3", 'PS_LargeTitle', 16, 8, color_white)
 	end
 
 	draw.SimpleText('You have ' .. LocalPlayer():PS_GetPoints() .. ' ' .. PS.Config.PointsName, 'PS_Heading3', self:GetWide() - 40, 24, color_white, TEXT_ALIGN_RIGHT, TEXT_ALIGN_CENTER)
 	
 end
 
-vgui.Register('DPointShopMenu', PANEL)
+vgui.Register('DPointShop3Menu', PANEL)

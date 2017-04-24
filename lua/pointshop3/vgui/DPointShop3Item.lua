@@ -198,4 +198,4 @@ function PANEL:OnCursorExited()
 	PS:RemoveHoverItem()
 end
 
-vgui.Register('DPointShopItem', PANEL, 'DPanel')
+vgui.Register('DPointShop3Item', PANEL, 'DPanel')

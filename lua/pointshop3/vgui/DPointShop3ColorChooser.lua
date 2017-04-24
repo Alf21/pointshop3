@@ -1,7 +1,7 @@
 local PANEL = {}
 
 function PANEL:Init()
-	self:SetTitle("PointShop Color Chooser")
+	self:SetTitle("PointShop3 Color Chooser")
 	self:SetSize(300, 300)
 	
 	self:SetBackgroundBlur(true)
@@ -34,4 +34,4 @@ function PANEL:SetColor(color)
 	self.colorpicker:SetColor(color or Color(255, 255, 255, 255))
 end
 
-vgui.Register('DPointShopColorChooser', PANEL, 'DFrame')
+vgui.Register('DPointShop3ColorChooser', PANEL, 'DFrame')

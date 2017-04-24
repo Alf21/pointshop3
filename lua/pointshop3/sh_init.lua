@@ -1,5 +1,5 @@
 --[[
-	pointshop/sh_init.lua
+	pointshop3/sh_init.lua
 	first file included on both states.
 ]]--
 
@@ -58,10 +58,10 @@ end
 -- Loading
 
 function PS:LoadItems()	
-	local _, dirs = file.Find('pointshop/items/*', 'LUA')
+	local _, dirs = file.Find('pointshop3/items/*', 'LUA')
 	
 	for _, category in pairs(dirs) do
-		local f, _ = file.Find('pointshop/items/' .. category .. '/__category.lua', 'LUA')
+		local f, _ = file.Find('pointshop3/items/' .. category .. '/__category.lua', 'LUA')
 		
 		if #f > 0 then
 			CATEGORY = {}
@@ -74,18 +74,18 @@ function PS:LoadItems()
 			CATEGORY.CanPlayerSee = function() return true end
 			CATEGORY.ModifyTab = function(tab) return end
 			
-			if SERVER then AddCSLuaFile('pointshop/items/' .. category .. '/__category.lua') end
-			include('pointshop/items/' .. category .. '/__category.lua')
+			if SERVER then AddCSLuaFile('pointshop3/items/' .. category .. '/__category.lua') end
+			include('pointshop3/items/' .. category .. '/__category.lua')
 			
 			if not PS.Categories[category] then
 				PS.Categories[category] = CATEGORY
 			end
 			
-			local files, _ = file.Find('pointshop/items/' .. category .. '/*.lua', 'LUA')
+			local files, _ = file.Find('pointshop3/items/' .. category .. '/*.lua', 'LUA')
 			
 			for _, name in pairs(files) do
 				if name ~= '__category.lua' then
-					if SERVER then AddCSLuaFile('pointshop/items/' .. category .. '/' .. name) end
+					if SERVER then AddCSLuaFile('pointshop3/items/' .. category .. '/' .. name) end
 					
 					ITEM = {}
 					
@@ -116,16 +116,16 @@ function PS:LoadItems()
 						return model, pos, ang
 					end
 					
-					include('pointshop/items/' .. category .. '/' .. name)
+					include('pointshop3/items/' .. category .. '/' .. name)
 					
 					if not ITEM.Name then
-						ErrorNoHalt("[POINTSHOP] Item missing name: " .. category .. '/' .. name .. "\n")
+						ErrorNoHalt("[POINTSHOP3] Item missing name: " .. category .. '/' .. name .. "\n")
 						continue
 					elseif not ITEM.Price then
-						ErrorNoHalt("[POINTSHOP] Item missing price: " .. category .. '/' .. name .. "\n")
+						ErrorNoHalt("[POINTSHOP3] Item missing price: " .. category .. '/' .. name .. "\n")
 						continue
 					elseif not ITEM.Model and not ITEM.Material then
-						ErrorNoHalt("[POINTSHOP] Item missing model or material: " .. category .. '/' .. name .. "\n")
+						ErrorNoHalt("[POINTSHOP3] Item missing model or material: " .. category .. '/' .. name .. "\n")
 						continue
 					end
 					

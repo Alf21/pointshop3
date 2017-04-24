@@ -1,16 +1,16 @@
 --[[
-	pointshop/cl_init.lua
+	pointshop3/cl_init.lua
 	first file included clientside.
 ]]--
 
 include "sh_init.lua"
 include "cl_player_extension.lua"
 
-include "vgui/DPointShopMenu.lua"
-include "vgui/DPointShopItem.lua"
-include "vgui/DPointShopPreview.lua"
-include "vgui/DPointShopColorChooser.lua"
-include "vgui/DPointShopGivePoints.lua"
+include "vgui/DPointShop3Menu.lua"
+include "vgui/DPointShop3Item.lua"
+include "vgui/DPointShop3Preview.lua"
+include "vgui/DPointShop3ColorChooser.lua"
+include "vgui/DPointShop3GivePoints.lua"
 
 PS.ShopMenu = nil
 PS.ClientsideModels = {}
@@ -24,7 +24,7 @@ local invalidplayeritems = {}
 
 function PS:ToggleMenu()
 	if not PS.ShopMenu then
-		PS.ShopMenu = vgui.Create('DPointShopMenu')
+		PS.ShopMenu = vgui.Create('DPointShop3Menu')
 		PS.ShopMenu:SetVisible(false)
 	end
 	
@@ -57,7 +57,7 @@ end
 
 function PS:ShowColorChooser(item, modifications)
 	-- TODO: Do this
-	local chooser = vgui.Create('DPointShopColorChooser')
+	local chooser = vgui.Create('DPointShop3ColorChooser')
 	chooser:SetColor(modifications.color)
 	
 	chooser.OnChoose = function(color)

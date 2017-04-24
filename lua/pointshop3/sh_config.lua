@@ -6,8 +6,8 @@ PS.Config.CommunityName = "My Community"
 
 PS.Config.DataProvider = 'pdata'
 
-PS.Config.Branch = 'https://raw.github.com/adamdburton/pointshop/master/' -- Master is most stable, used for version checking.
-PS.Config.CheckVersion = true -- Do you want to be notified when a new version of Pointshop is avaliable?
+PS.Config.Branch = 'https://raw.github.com/adamdburton/pointshop3/master/' -- Master is most stable, used for version checking.
+PS.Config.CheckVersion = true -- Do you want to be notified when a new version of Pointshop3 is avaliable?
 
 PS.Config.ShopKey = 'F3' -- F1, F2, F3 or F4, or blank to disable
 PS.Config.ShopCommand = 'ps_shop' -- Console command to open the shop, set to blank to disable

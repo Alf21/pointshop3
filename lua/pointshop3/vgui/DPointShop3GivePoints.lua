@@ -1,7 +1,7 @@
 local PANEL = {}
 
 function PANEL:Init()
-	self:SetTitle("PointShop Give "..PS.Config.PointsName)
+	self:SetTitle("PointShop3 Give "..PS.Config.PointsName)
 	self:SetSize(300, 144)
 	
 	self:SetDeleteOnClose(true)
@@ -116,4 +116,4 @@ function PANEL:Update()
 	self.submit:SetDisabled(disabled)
 end
 
-vgui.Register('DPointShopGivePoints', PANEL, 'DFrame')
+vgui.Register('DPointShop3GivePoints', PANEL, 'DFrame')

@@ -129,4 +129,4 @@ function PANEL:DrawOtherModels()
 	end
 end
 
-vgui.Register('DPointShopPreview', PANEL, 'DModelPanel')
+vgui.Register('DPointShop3Preview', PANEL, 'DModelPanel')

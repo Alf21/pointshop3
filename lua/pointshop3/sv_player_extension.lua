@@ -51,21 +51,21 @@ function Player:PS_PlayerInitialSpawn()
 		if PS.Config.ShopKey ~= '' then
 			timer.Simple(5, function() -- Give them time to load up
 				if !IsValid(self) then return end
-				self:PS_Notify('Press ' .. PS.Config.ShopKey .. ' to open PointShop!')
+				self:PS_Notify('Press ' .. PS.Config.ShopKey .. ' to open PointShop3!')
 			end)
 		end
 
 		if PS.Config.ShopCommand ~= '' then
 			timer.Simple(5, function() -- Give them time to load up
 				if !IsValid(self) then return end
-				self:PS_Notify('Type ' .. PS.Config.ShopCommand .. ' in console to open PointShop!')
+				self:PS_Notify('Type ' .. PS.Config.ShopCommand .. ' in console to open PointShop3!')
 			end)
 		end
 
 		if PS.Config.ShopChatCommand ~= '' then
 			timer.Simple(5, function() -- Give them time to load up
 				if !IsValid(self) then return end
-				self:PS_Notify('Type ' .. PS.Config.ShopChatCommand .. ' in chat to open PointShop!')
+				self:PS_Notify('Type ' .. PS.Config.ShopChatCommand .. ' in chat to open PointShop3!')
 			end)
 		end
 
@@ -78,7 +78,7 @@ function Player:PS_PlayerInitialSpawn()
 	if PS.Config.CheckVersion and PS.BuildOutdated and self:IsAdmin() then
 		timer.Simple(5, function()
 			if !IsValid(self) then return end
-			self:PS_Notify("PointShop is out of date, please tell the server owner!")
+			self:PS_Notify("PointShop3 is out of date, please tell the server owner!")
 		end)
 	end
 
