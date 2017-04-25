@@ -1,32 +1,29 @@
-[![](https://img.shields.io/github/stars/adamdburton/pointshop3.svg?style=social&label=Star)]()
-[![](https://img.shields.io/github/issues-raw/adamdburton/pointshop3.svg)]()
-[![](https://img.shields.io/github/release/adamdburton/pointshop3.svg)]()
-[![](https://img.shields.io/github/license/adamdburton/pointshop3.svg)]()
-
 ## Synopsis
 
-Pointshop3 is a shop system for Garry's Mod, created by [Adam '_Undefined' Burton](https://github.com/adamdburton) and maintained by ['Handsome' Matt Stevens](https://github.com/HandsomeMatt).
+Pointshop is a shop system for Garry's Mod, created by [Adam '_Undefined' Burton](https://github.com/adamdburton) and maintained by ['Handsome' Matt Stevens](https://github.com/HandsomeMatt).
+
+Pointshop3 is an extension of Pointshop to work with Pointshop 2's API. Maintained by [MeepDarknessMeep](https://github.com/meepdarknessmeep) and the [glua group](https://github.com/glua)
 
 ## Quick start
 
 Two quick start options are available:
 
-* [Download the latest tarball](https://github.com/adamdburton/pointshop3/archive/master.zip). (*same as git clone, without the git*)
-* [Download the latest stable release](https://github.com/adamdburton/pointshop3/releases). (*can be out of date*)
-* Clone the repo: `git clone https://github.com/adamdburton/pointshop3.git`. (*best way to stay up to date*)
+* [Download the latest tarball](https://github.com/glua/pointshop3/archive/master.zip). (*same as git clone, without the git*)
+* [Download the latest stable release](https://github.com/glua/pointshop3/releases). (*can be out of date*)
+* Clone the repo: `git clone https://github.com/glua/pointshop3.git`. (*best way to stay up to date*)
 
 ## Bugs and feature requests
 
-* Have a bug or a feature request? [Please open a new issue](https://github.com/adamdburton/pointshop3/issues). Make sure you follow our [contributing guidelines](https://github.com/adamdburton/pointshop3/blob/master/CONTRIBUTING.md).
-* Have a question that's not a feature request or bug report? [Ask on the Facepunch thread.](http://facepunch.com/threads/1286577)
+* Have a bug or a feature request? [Please open a new issue](https://github.com/glua/pointshop3/issues). Make sure you follow our [contributing guidelines](https://github.com/glua/pointshop3/blob/master/CONTRIBUTING.md).
 
 ## Documentation
 
-http://pointshop3.burt0n.net
+* http://pointshop.burt0n.net
+* http://pointshop2.kamshak.com/en/latest/api/index.html
 
 ## Contributing
 
-Please read through our [contributing guidelines](https://github.com/adamdburton/pointshop3/blob/master/CONTRIBUTING.md). Included are directions for opening issues, coding standards, and notes on development.
+Please read through our [contributing guidelines](https://github.com/glua/pointshop3/blob/master/CONTRIBUTING.md). Included are directions for opening issues, coding standards, and notes on development.
 
 ## Versioning
 
